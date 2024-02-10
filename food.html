@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <title>Random food selector</title>
+    <link rel="stylesheet" href="foodstyle.css">
+</head>
+
+<body>
+    <div class="back">
+        <p>Select the food by clicking</p>
+        <button class="btn" onclick=select_food()>Click me</button>
+        <div id="output"> </div>
+
+    </div>
+
+    <script>
+        var button = document.getElementsByClassName("btn");
+        var i = 0;
+        function select_food() {
+            var items = ["Gun Chhj", "Chinese Adda", "Kulcha Land", "CIPET", "Chicken under 99", "Brothers", "Bikaner", "Gudiya Champ Food", "Chirag Food Point", "Pizerria"];
+            if (i > items.length - 1) {
+                i = 0;
+            }
+            var selectedFood = items[i++];
+            console.log(selectedFood);
+            // return items[i++];
+            // console.log("uce");
+            document.getElementById("output").innerText = "Option : " + selectedFood;
+        }
+    </script>
+</body>
+
+</html>
